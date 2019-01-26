@@ -1,6 +1,3 @@
-const LOAD_NUM = 4;
-watch: null;
-
 new Vue({
 	el: "#app",
 	data: {
