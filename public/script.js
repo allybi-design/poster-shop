@@ -4,8 +4,7 @@ new Vue({
 		total: 0,
 		products: [],
 		cart: [],
-		loading: false,
-		results: []
+		loading: false
 	},
 	methods: {
 		addCart(product) {
