@@ -19,8 +19,8 @@ fs.readFile("./directory.json", "utf8", function(err, data) {
 	}
 });
 
-app.get("/search", function(req, res) {
-	var results = directory.reduce(function(acc, file) {
+app.get("/search", (req, res) => {
+	var results = directory.reduce((acc, file) => {
 		if (file.tags.indexOf(req.query.q) !== -1) {
 			acc.push({
 				id: file.id,
@@ -42,6 +42,6 @@ if (process.env.NODE_ENV !== "production") {
 }
 
 var port = process.env.PORT || 3000;
-server.listen(port, function () {
+server.listen(port, () => {
 	console.log("Listening on port ".concat(port));
 });
